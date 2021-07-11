@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --colorSedan: hsl(31, 77%, 52%);
+  --colorSuv: hsl(184, 100%, 22%);
+  --colorLuxury: hsl(179, 100%, 13%);
+
+  --colorText: hsla(0, 0%, 100%, 0.75);
+  --colorBackground: hsl(0, 0%, 95%);
+
+  --appFontSize: 15px;
+  --appBorderRadius: 8px;
+  --appButtonBorderRadius: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend deca", serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: var(--appFontSize);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.section {
+  max-width: 350px;
+  padding: 50px;
+}
+
+.section1 {
+  background-color: var(--colorSedan);
+  border-radius: var(--appBorderRadius) 0 0 var(--appBorderRadius);
+}
+
+.section2 {
+  background-color: var(--colorSuv);
+}
+
+.section3 {
+  background-color: var(--colorLuxury);
+  border-radius: 0 var(--appBorderRadius) var(--appBorderRadius) 0;
+}
+
+.section-heading {
+  text-transform: uppercase;
+  color: var(--colorBackground);
+  font-family: "Big Shoulders Display", serif;
+  font-size: 40px;
+  margin: 35px 0;
+}
+
+.section button {
+  background-color: var(--colorBackground);
+  border: 2px solid var(--colorBackground);
+  border-radius: var(--appButtonBorderRadius);
+  padding: 15px 40px;
+  margin-top: 80px;
+}
+
+.section button:hover {
+  color: var(--colorBackground);
+  background-color: transparent;
+}
+
+.section p {
+  color: var(--colorText);
+  line-height: 1.8;
+}
+
+.section1 button {
+  color: var(--colorSedan);
+}
+
+.section2 button {
+  color: var(--colorSuv);
+}
+
+.section3 button {
+  color: var(--colorLuxury);
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  main {
+    flex-direction: column;
+    margin: 30px;
+  }
+  .section {
+    max-width: 100%;
+  }
+
+  .section1 {
+    border-radius: var(--appBorderRadius) var(--appBorderRadius) 0 0;
+  }
+
+  .section3 {
+    border-radius: 0 0 var(--appBorderRadius) var(--appBorderRadius);
+  }
+
+  .section button {
+    margin-top: 30px;
+  }
+}
